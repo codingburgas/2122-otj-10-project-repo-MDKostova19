@@ -1,9 +1,8 @@
 #include<iostream>
 #include<fstream>
-#include<string>
-#include <vector>
 #include <windows.h>
 #include <conio.h>
+
 #include "menuDesign.h"
 #include "registration.h"
 using namespace std;

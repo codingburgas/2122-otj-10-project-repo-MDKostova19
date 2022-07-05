@@ -25,17 +25,17 @@ void consoleCoordinates(int x, int y)
 // Function for the main menu
 void menuOptionsBorder()
 {
-    consoleCoordinates(51, 5);
+    consoleCoordinates(39, 5);
     cout << "________________________________";
-    consoleCoordinates(50, 6);
+    consoleCoordinates(38, 6);
     cout << "/                                \\";
-    consoleCoordinates(50, 7);
+    consoleCoordinates(38, 7);
     cout << "|                                |";
-    consoleCoordinates(50, 8);
+    consoleCoordinates(38, 8);
     cout << "|                                |";
-    consoleCoordinates(50, 9);
+    consoleCoordinates(38, 9);
     cout << "|                                |";
-    consoleCoordinates(50, 10);
+    consoleCoordinates(38, 10);
     cout << "\\________________________________/";
 }
 
@@ -48,7 +48,7 @@ void menuOptions(int counter)
     case 1:
     {
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-        consoleCoordinates(57, 8);
+        consoleCoordinates(46, 8);
         cout << BLUE << "REGISTRATION FORM" << RESET;
     }break;
 
@@ -233,7 +233,7 @@ void askInput()
 // Function for commands if the user is guest
 void askInputGuest()
 {
-    consoleCoordinates(25, 22);
+    consoleCoordinates(22, 22);
     cout << "If you want to check a task press ctrl + t";
 }
 

@@ -152,14 +152,14 @@ void editTask(Node* head, int ID)
             system("CLS");
 
             cin.ignore();
-            consoleCoordinates(35, 14);
+            consoleCoordinates(35, 5);
             cout << "Edit task's name";
-            consoleCoordinates(35, 15);
+            consoleCoordinates(35, 6);
             string name;
             getline(cin, name);
-            consoleCoordinates(35, 16);
+            consoleCoordinates(35, 8);
             cout << "Edit information";
-            consoleCoordinates(35, 17);
+            consoleCoordinates(35, 9);
             string information;
             getline(cin, information);
             temp->ID = ID;
@@ -175,22 +175,22 @@ void editTask(Node* head, int ID)
 void insertTask(Node* Head)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-    consoleCoordinates(35, 10);
+    consoleCoordinates(35, 5);
     cout << "Enter ID\n";
-    consoleCoordinates(35, 11);
+    consoleCoordinates(35, 6);
     int ID;
     cin >> ID;
 
     cin.ignore();
-    consoleCoordinates(35, 13);
+    consoleCoordinates(35, 8);
     cout << "Enter task's name\n";
     string name;
-    consoleCoordinates(35, 14);
+    consoleCoordinates(35, 9);
     getline(cin, name);
-    consoleCoordinates(35, 16);
+    consoleCoordinates(35, 11);
     cout << "Write information about the task and its participant\n";
     string information;
-    consoleCoordinates(35, 17);
+    consoleCoordinates(35, 12);
     getline(cin, information);
     system("CLS");
     insert(&Head, ID, name, information);
@@ -595,7 +595,6 @@ bool contentMenuInputGuest(Node* Head) {
         }
     } while (true);
     return 1;
-
 }
 
 bool contentMenuInputGuestMenu(Node* Head)
@@ -605,6 +604,7 @@ bool contentMenuInputGuestMenu(Node* Head)
     counterPrint = 11;
     printTasks(Head);
     askInputGuest();
+    taskMenuTitle();
     do
     {
         switch (_getch())
@@ -651,9 +651,9 @@ void adminCommands(Node* Head)
     {
         system("CLS");
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-        consoleCoordinates(35, 10);
+        consoleCoordinates(35, 5);
         cout << "Enter the task's id to remove it";
-        consoleCoordinates(35, 11);
+        consoleCoordinates(35, 6);
         int id;
         cin >> id;
         deleteTask(&Head, id);
